@@ -29,6 +29,7 @@ var app = new Vue({
             // console.log(MusicId);
             axios.get("https://autumnfish.cn/song/url?id=" + MusicId)
                 .then(function(response) {
+                    crossDomain: true,
                     // console.log(response);
                     console.log(response.data.data[0].url)
                     that.musicUrl = response.data.data[0].url;
